@@ -2,6 +2,7 @@
 
 #### Project Link:
 _Link to Public Project: https://github.com/cllhares/build-ml-pipeline-for-short-term-rental-prices/_
+_Wandb:_ https://wandb.ai/charlielee/nyc_airbnb
 
 You are working for a property management company renting rooms and properties for short periods of 
 time on various rental platforms. You need to estimate the typical price for a given property based 
