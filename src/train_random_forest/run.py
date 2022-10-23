@@ -108,11 +108,11 @@ def go(args):
     # you just created to add the "random_forest_dir" directory to the artifact, and finally use
     # run.log_artifact to log the artifact to the run
     # YOUR CODE HERE
-    artifact_to_load = wandb.Artifact(args.outpus_artifact,
+    artifact_to_load = wandb.Artifact(args.output_artifact,
                                       type="model_export",
-                                      description="Random Forrest Model",
+                                      description="Random Forest Model",
                                       metadata=rf_config)
-    artifact_to_load.add_dir("random_forrest_dir")
+    artifact_to_load.add_dir("random_forest_dir")
     run.log_artifact(artifact_to_load)
     ######################################
 
@@ -225,7 +225,7 @@ def get_inference_pipeline(rf_config, max_tfidf_features):
     # ColumnTransformer instance that we saved in the `preprocessor` variable, and a step called "random_forest"
     # with the random forest instance that we just saved in the `random_forest` variable.
     # HINT: Use the explicit Pipeline constructor so you can assign the names to the steps, do not use make_pipeline
-    sk_pipe = Pipeline(step=[
+    sk_pipe = Pipeline(steps=[
         ("preprocessor", preprocessor),
         ("random_forest", random_forest)
     ])
